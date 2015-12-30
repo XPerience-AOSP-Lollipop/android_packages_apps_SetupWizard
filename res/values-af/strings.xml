@@ -41,8 +41,6 @@
   <string name="other_services_summary">Hierdie dienste word deur Google verskaf en jy kan dit aktiveer of deaktiveer op enige tyd. Data sal in ooreenstemming met Google se <xliff:g id="name" example="Privacy Policy">%s</xliff:g> gebruik word.</string>
   <string name="location_services_summary">Ligging dienste laat stelsel en ander 3rde party programme toe om data te gebruik soos jou benaderde ligging. Bv \'n program kan jou benaderde ligging gebruik om nabygeleë koffiewinkels op te spoor.</string>
   <string name="location_access_summary"><b>Laat programme toe wat jou toestemming gevra het</b> om jou ligging inligting te gebruik. Dit kan jou huidige ligging en plekke asook liggings en plekke uit die verlede insluit.</string>
-  <string name="location_gps" product="tablet"><b>Verbeter ligging akkuraatheid</b> deur programme toe te laat om jou GPS te kan gebruik op jou tablet.</string>
-  <string name="location_gps" product="default"><b>Verbeter ligging akkuraatheid</b> deur programme toe te laat om jou GPS te kan gebruik op jou foon.</string>
   <string name="location_network"><b>Gebruik Wi-Fi</b> om programme te help om jou ligging te bepaal.</string>
   <string name="location_network_telephony"><b>Gebruik Wi-Fi en mobiele netwerke</b> om programme te help om jou ligging te bepaal.</string>
   <string name="location_network_gms"><b>Gebruik Google se ligging diens</b> om programme te help om jou ligging te bepaal. Dit beteken dit stuur anonieme ligging data na Google, selfs wanneer daar geen programme aktief is nie.</string>
@@ -54,12 +52,12 @@
   <string name="yes">Ja</string>
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Noodoproep</string>
-  <string name="setup_services">Cyanogen funksies</string>
-  <string name="services_explanation" product="tablet">Hierdie dienste werk vir jou om die vermoëns van jou tablet uit te brei. Data sal in ooreenkomstig gebruik word met Cyanogen\'s <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="services_explanation" product="default">Hierdie dienste werk vir jou om die vermoëns van jou foon uit te brei. Data sal in ooreenkomstig gebruik word met Cyanogen\'s <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
+  <string name="setup_services">XPerience funksies</string>
+  <string name="services_explanation" product="tablet">Hierdie dienste werk vir jou om die vermoëns van jou tablet uit te brei. Data sal in ooreenkomstig gebruik word met XPerience\'s <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
+  <string name="services_explanation" product="default">Hierdie dienste werk vir jou om die vermoëns van jou foon uit te brei. Data sal in ooreenkomstig gebruik word met XPerience\'s <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
   <string name="services_privacy_policy">Privaatheid beleid</string>
   <string name="services_help_improve_cm">Help verbeter <xliff:g id="name" example="CyanogenMod">%s</xliff:g></string>
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve CyanogenMod">%1$s</xliff:g> deur outomaties diagnostiese en gebruikers data te stuur na Cyanogen. Hierdie inligting kan nie gebruik word om jou te identifiseer nie en help spanne werk op dinge soos battery lewe, program werkverrigting en nuwe <xliff:g id="name" example="CyanogenMod">%2$s</xliff:g> funksies.</string>
+  <string name="services_metrics_label"><xliff:g id="name" example="Help improve CyanogenMod">%1$s</xliff:g> deur outomaties diagnostiese en gebruikers data te stuur na XPerience. Hierdie inligting kan nie gebruik word om jou te identifiseer nie en help spanne werk op dinge soos battery lewe, program werkverrigting en nuwe <xliff:g id="name" example="CyanogenMod">%2$s</xliff:g> funksies.</string>
   <string name="services_apply_theme">Pas <xliff:g id="name" example="Material">%s</xliff:g> tema toe</string>
   <string name="services_apply_theme_label"><xliff:g id="name" example="Apply the Material theme">%s</xliff:g> aktiveer unieke ikone, agtergronde en lettertipe.</string>
   <string name="services_os_nav_keys_label"><b>Gebruik skerm navigasie sleutels</b> in plaas van hardeware sleutels.</string>
@@ -67,9 +65,9 @@
   <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%1$s</xliff:g> om SMS gesprekke met ander gebruikers te enkripteer met behulp van veilige SMS op \'n <xliff:g id="name" example="CyanogenMod">%2$s</xliff:g> toestel.</string>
   <string name="setup_unlock">Ontsluit</string>
   <string name="setup_device_locked">Die toestel is gesluit deur die gebruiker.</string>
-  <string name="setup_require_cyanogen_label"><b>Benodig  jou Cyanogen wagwoord</b> om jou toestel te gebruik, selfs nadat \'n fabriek herstel gedoen is.</string>
+  <string name="setup_require_cyanogen_label"><b>Benodig  jou XPerience wagwoord</b> om jou toestel te gebruik, selfs nadat \'n fabriek herstel gedoen is.</string>
   <string name="setup_device_locked_instructions"><i>Om hierdie funksie te aan/af te skakel, gaan asseblief na Instellings &gt; Sekuriteit</i></string>
-  <string name="setup_warning_skip_anyway">Sonder \'n Cyanogen bedryfstelsel rekening, sal jy nie in staat wees om:\n\nOm jou toestel met nuwe ikone, agtergronde en meer in die Temas program te verpersoonlik nie\n\nJou toestel te vind of op te spoor indien dit verlore gaan nie</string>
+  <string name="setup_warning_skip_anyway">Sonder \'n XPerience bedryfstelsel rekening, sal jy nie in staat wees om:\n\nOm jou toestel met nuwe ikone, agtergronde en meer in die Temas program te verpersoonlik nie\n\nJou toestel te vind of op te spoor indien dit verlore gaan nie</string>
   <string name="settings_fingerprint_setup_title">Kies nog \'n skerm sluit tipe</string>
   <string name="settings_fingerprint_setup_details">Hoe wil jy jou skerm sluit?</string>
   <string name="fingerprint_setup_title">Vingerafdruk opstelling</string>

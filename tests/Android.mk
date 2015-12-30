@@ -9,9 +9,9 @@ LOCAL_JAVA_LIBRARIES := android.test.runner
 # Include all test java files.
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-LOCAL_PACKAGE_NAME := CyanogenSetupWizardTests
+LOCAL_PACKAGE_NAME := XPerienceSetupWizardTests
 LOCAL_CERTIFICATE := platform
 
-LOCAL_INSTRUMENTATION_FOR := CyanogenSetupWizard
+LOCAL_INSTRUMENTATION_FOR := XPerienceSetupWizard
 
 include $(BUILD_PACKAGE)
