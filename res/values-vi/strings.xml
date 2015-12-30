@@ -16,8 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve CyanogenMod">%1$s</xliff:g> bằng cách tự động gửi dữ liệu chẩn đoán và sử dụng đến Cyanogen. Thông tin này không được sử dụng để nhận dạng bạn và giúp nhóm thực hiện những thứ như tuổi thọ pin, hiệu suất ứng dụng và các tính năng <xliff:g id="name" example="CyanogenMod">%2$s</xliff:g> mới.</string>
-  <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%1$s</xliff:g> để mã hóa các cuộc trò chuyện qua tin nhắn SMS với những người dùng khác bằng cách sử dụng tin nhắn SMS an toàn trên thiết bị <xliff:g id="name" example="CyanogenMod">%2$s</xliff:g>.</string>
+  <string name="services_metrics_label"><xliff:g id="name" example="Help improve XPerience">%1$s</xliff:g> bằng cách tự động gửi dữ liệu chẩn đoán và sử dụng đến XPerience. Thông tin này không được sử dụng để nhận dạng bạn và giúp nhóm thực hiện những thứ như tuổi thọ pin, hiệu suất ứng dụng và các tính năng <xliff:g id="name" example="XPerience">%2$s</xliff:g> mới.</string>
+  <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%1$s</xliff:g> để mã hóa các cuộc trò chuyện qua tin nhắn SMS với những người dùng khác bằng cách sử dụng tin nhắn SMS an toàn trên thiết bị <xliff:g id="name" example="XPerience">%2$s</xliff:g>.</string>
   <string name="settings_fingerprint_setup_title">Chọn kiểu khóa màn hình dự phòng</string>
   <string name="settings_fingerprint_setup_details">Bạn muốn khóa màn hình của bạn như thế nào?</string>
   <string name="fingerprint_setup_title">Thiết lập vân tay</string>
