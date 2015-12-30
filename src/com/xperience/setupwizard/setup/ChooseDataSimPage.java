@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The XPerience Project
+ * Copyright (C) 2014 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -353,6 +353,9 @@ public class ChooseDataSimPage extends SetupPage {
         private void setDataSubChecked(SubscriptionInfo subInfoRecord) {
             if (mIsAttached) {
                 for (int i = 0; i < mCheckBoxes.size(); i++) {
+                    if (subInfoRecord.getSimSlotIndex() == i) {
+                        mCheckBoxes.get(i).setChecked(true);
+                      } else {
                         mCheckBoxes.get(i).setChecked(false);
                     }
 
@@ -485,3 +488,4 @@ public class ChooseDataSimPage extends SetupPage {
     }
 
 }
+
