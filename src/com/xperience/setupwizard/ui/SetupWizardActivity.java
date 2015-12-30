@@ -69,7 +69,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
 
     private EnableAccessibilityController mEnableAccessibilityController;
 
-    private CMSetupWizardData mSetupData;
+    private XPESetupWizardData mSetupData;
 
     private final Handler mHandler = new Handler();
 
@@ -103,9 +103,9 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
         mButtonBar = findViewById(R.id.button_bar);
         mFinishingProgressBar = (ProgressBar)findViewById(R.id.finishing_bar);
         ((SetupWizardApp)getApplicationContext()).disableStatusBar();
-        mSetupData = (CMSetupWizardData)getLastNonConfigurationInstance();
+        mSetupData = (XPESetupWizardData)getLastNonConfigurationInstance();
         if (mSetupData == null) {
-            mSetupData = new CMSetupWizardData(getApplicationContext());
+            mSetupData = new XPESetupWizardData(getApplicationContext());
         }
         mNextButton = (Button) findViewById(R.id.next_button);
         mPrevButton = (Button) findViewById(R.id.prev_button);

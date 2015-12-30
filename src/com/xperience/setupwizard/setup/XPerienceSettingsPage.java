@@ -153,7 +153,6 @@ public class XPerienceSettingsPage extends SetupPage {
         if (privacyData != null &&
                 privacyData.containsKey(KEY_REGISTER_WHISPERPUSH) &&
                 privacyData.getBoolean(KEY_REGISTER_WHISPERPUSH)) {
-                    String.valueOf(privacyData.getBoolean(KEY_REGISTER_WHISPERPUSH)));
             Log.i(TAG, "Registering with WhisperPush");
             WhisperPushUtils.startRegistration(mContext);
         }
@@ -311,19 +310,6 @@ public class XPerienceSettingsPage extends SetupPage {
                 }
             }
 
-            mMetricsRow = mRootView.findViewById(R.id.metrics);
-            mMetricsRow.setOnClickListener(mMetricsClickListener);
-            String metricsHelpImproveCM =
-                    getString(R.string.services_help_improve_cm, getString(R.string.os_name));
-            String metricsSummary = getString(R.string.services_metrics_label,
-                    metricsHelpImproveCM, getString(R.string.os_name));
-            final SpannableStringBuilder metricsSpan = new SpannableStringBuilder(metricsSummary);
-            metricsSpan.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD),
-                    0, metricsHelpImproveCM.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            TextView metrics = (TextView) mRootView.findViewById(R.id.enable_metrics_summary);
-            metrics.setText(metricsSpan);
-            mMetrics = (CheckBox) mRootView.findViewById(R.id.enable_metrics_checkbox);
-
             mDefaultThemeRow = mRootView.findViewById(R.id.theme);
             mHideThemeRow = true; // hideThemeSwitch(getActivity());
             if (mHideThemeRow) {
@@ -448,3 +434,4 @@ public class XPerienceSettingsPage extends SetupPage {
 
     }
 }
+

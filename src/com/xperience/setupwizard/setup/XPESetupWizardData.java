@@ -27,6 +27,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import com.android.internal.telephony.TelephonyIntents;
 import com.xperience.setupwizard.R;
+import com.xperience.setupwizard.setup.XPerienceSettingsPage;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 
 import java.util.ArrayList;
@@ -115,10 +116,10 @@ public class XPESetupWizardData extends AbstractSetupData {
         if (gmsAccountPage != null) {
             gmsAccountPage.setHidden(!isConnected && gmsAccountPage.canSkip());
         }
-        XPerienceServicesPage XPerienceServicesPage =
+        XPerienceServicesPage xperienceServicesPage =
                 (XPerienceServicesPage) getPage(XPerienceServicesPage.TAG);
-        if (XPerienceServicesPage != null) {
-            XPerienceServicesPage.setHidden(!isConnected);
+        if (xperienceServicesPage != null) {
+            xperienceServicesPage.setHidden(!isConnected);
         }
     }
 
