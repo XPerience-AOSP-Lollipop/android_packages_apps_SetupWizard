@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2013 The xperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +48,7 @@ import android.widget.TextView;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.SetupPageFragment;
 import com.xperience.setupwizard.ui.WebViewDialogFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
@@ -139,6 +140,10 @@ public class XPerienceSettingsPage extends SetupPage {
             @Override
             public void run() {
                 if (getData().containsKey(KEY_ENABLE_NAV_KEYS)) {
+                    SetupStats.addEvent(SetupStats.Categories.SETTING_CHANGED,
+                            SetupStats.Action.ENABLE_NAV_KEYS,
+                            SetupStats.Label.CHECKED,
+                            String.valueOf(getData().getBoolean(KEY_ENABLE_NAV_KEYS)));
                     writeDisableNavkeysOption(mContext, getData().getBoolean(KEY_ENABLE_NAV_KEYS));
                 }
             }
@@ -153,6 +158,10 @@ public class XPerienceSettingsPage extends SetupPage {
         if (privacyData != null &&
                 privacyData.containsKey(KEY_REGISTER_WHISPERPUSH) &&
                 privacyData.getBoolean(KEY_REGISTER_WHISPERPUSH)) {
+            SetupStats.addEvent(SetupStats.Categories.SETTING_CHANGED,
+                    SetupStats.Action.USE_SECURE_SMS,
+                    SetupStats.Label.CHECKED,
+                    String.valueOf(privacyData.getBoolean(KEY_REGISTER_WHISPERPUSH)));
             Log.i(TAG, "Registering with WhisperPush");
             WhisperPushUtils.startRegistration(mContext);
         }
@@ -310,6 +319,19 @@ public class XPerienceSettingsPage extends SetupPage {
                 }
             }
 
+            mMetricsRow = mRootView.findViewById(R.id.metrics);
+            mMetricsRow.setOnClickListener(mMetricsClickListener);
+            String metricsHelpImproveCM =
+                    getString(R.string.services_help_improve_cm, getString(R.string.os_name));
+            String metricsSummary = getString(R.string.services_metrics_label,
+                    metricsHelpImproveCM, getString(R.string.os_name));
+            final SpannableStringBuilder metricsSpan = new SpannableStringBuilder(metricsSummary);
+            metricsSpan.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD),
+                    0, metricsHelpImproveCM.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            TextView metrics = (TextView) mRootView.findViewById(R.id.enable_metrics_summary);
+            metrics.setText(metricsSpan);
+            mMetrics = (CheckBox) mRootView.findViewById(R.id.enable_metrics_checkbox);
+
             mDefaultThemeRow = mRootView.findViewById(R.id.theme);
             mHideThemeRow = true; // hideThemeSwitch(getActivity());
             if (mHideThemeRow) {
@@ -434,4 +456,3 @@ public class XPerienceSettingsPage extends SetupPage {
 
     }
 }
-

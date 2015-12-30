@@ -37,6 +37,7 @@ import android.util.Log;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.LoadingFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 
@@ -122,6 +123,9 @@ public class GmsAccountPage extends SetupPage {
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SetupWizardApp.REQUEST_CODE_SETUP_GMS) {
             if (!mBackupEnabled && SetupWizardUtils.isOwner() && resultCode == Activity.RESULT_OK) {
+                SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                        SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                        SetupStats.Label.GMS_ACCOUNT, "success");
                 launchGmsRestorePage();
             } else {
                 handleResult(requestCode, resultCode);
@@ -146,12 +150,24 @@ public class GmsAccountPage extends SetupPage {
 
     private void handleResult(int requestCode, int resultCode) {
         if (resultCode == Activity.RESULT_CANCELED) {
+            SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                    SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                    requestCode == SetupWizardApp.REQUEST_CODE_SETUP_GMS ?
+                            SetupStats.Label.GMS_ACCOUNT : SetupStats.Label.RESTORE, "canceled");
             getCallbacks().onPreviousPage();
         }  else {
             if (resultCode == Activity.RESULT_OK) {
+                SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                        SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                        requestCode == SetupWizardApp.REQUEST_CODE_SETUP_GMS ?
+                                SetupStats.Label.GMS_ACCOUNT : SetupStats.Label.RESTORE, "success");
                 getCallbacks().onNextPage();
             } else {
                 if (canSkip()) {
+                    SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                            SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                            requestCode == SetupWizardApp.REQUEST_CODE_SETUP_GMS ?
+                                    SetupStats.Label.GMS_ACCOUNT : SetupStats.Label.RESTORE, "skipped");
                     getCallbacks().onNextPage();
                 } else {
                     getCallbacks().onPreviousPage();
@@ -179,6 +195,9 @@ public class GmsAccountPage extends SetupPage {
                         ActivityOptions.makeCustomAnimation(mContext,
                                 android.R.anim.fade_in,
                                 android.R.anim.fade_out);
+                SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                        SetupStats.Action.EXTERNAL_PAGE_LAUNCH,
+                        SetupStats.Label.PAGE, SetupStats.Label.RESTORE);
                 mFragment.startActivityForResult(
                         intent,
                         SetupWizardApp.REQUEST_CODE_RESTORE_GMS, options.toBundle());
@@ -219,6 +238,9 @@ public class GmsAccountPage extends SetupPage {
                                     ActivityOptions.makeCustomAnimation(mContext,
                                             android.R.anim.fade_in,
                                             android.R.anim.fade_out);
+                            SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                                    SetupStats.Action.EXTERNAL_PAGE_LAUNCH,
+                                    SetupStats.Label.PAGE, SetupStats.Label.GMS_ACCOUNT);
                             mFragment.startActivityForResult(intent,
                                     SetupWizardApp.REQUEST_CODE_SETUP_GMS, options.toBundle());
                         } catch (OperationCanceledException e) {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2013 The xperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,7 @@ import android.util.Log;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.LoadingFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 
@@ -94,6 +95,10 @@ public class XPerienceServicesPage extends SetupPage {
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SetupWizardApp.REQUEST_CODE_SETUP_XPERIENCE) {
             if (resultCode == Activity.RESULT_OK || resultCode == Activity.RESULT_FIRST_USER) {
+                SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                        SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                        SetupStats.Label.XPERIENCE_ACCOUNT,
+                        resultCode == Activity.RESULT_OK ? "success" : "skipped");
                 if (SetupWizardUtils.accountExists(mContext,
                         mContext.getString(R.string.cm_account_type))) {
                     if (SetupWizardUtils.isDeviceLocked()) {
@@ -103,6 +108,9 @@ public class XPerienceServicesPage extends SetupPage {
                 }
                 getCallbacks().onNextPage();
             } else if (resultCode == Activity.RESULT_CANCELED) {
+                SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                        SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                        SetupStats.Label.XPERIENCE_ACCOUNT, "canceled");
                 getCallbacks().onPreviousPage();
             }
         }
@@ -128,7 +136,11 @@ public class XPerienceServicesPage extends SetupPage {
                                             ActivityOptions.makeCustomAnimation(mContext,
                                                     android.R.anim.fade_in,
                                                     android.R.anim.fade_out);
-
+                                    SetupStats
+                                            .addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                                                    SetupStats.Action.EXTERNAL_PAGE_LAUNCH,
+                                                    SetupStats.Label.PAGE,
+                                                    SetupStats.Label.XPERIENCE_ACCOUNT);
                                     mFragment.startActivityForResult(intent,
                                             SetupWizardApp.REQUEST_CODE_SETUP_XPERIENCE,
                                             options.toBundle());
@@ -137,7 +149,7 @@ public class XPerienceServicesPage extends SetupPage {
                                 } catch (IOException e) {
                                     error = true;
                                 } catch (AuthenticatorException e) {
-                                    Log.e(TAG, "Error launching xpe account", e);
+                                    Log.e(TAG, "Error launching XPe account", e);
                                     error = true;
                                 } finally {
                                     if (error && getCallbacks().

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project
+ * Copyright (C) 2014 The xperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,6 +47,7 @@ import com.android.internal.telephony.TelephonyIntents;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.SetupPageFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 
@@ -355,7 +356,10 @@ public class ChooseDataSimPage extends SetupPage {
                 for (int i = 0; i < mCheckBoxes.size(); i++) {
                     if (subInfoRecord.getSimSlotIndex() == i) {
                         mCheckBoxes.get(i).setChecked(true);
-                      } else {
+                        SetupStats.addEvent(SetupStats.Categories.SETTING_CHANGED,
+                                SetupStats.Action.PREFERRED_DATA_SIM,
+                                SetupStats.Label.SLOT, String.valueOf(i + 1));
+                    } else {
                         mCheckBoxes.get(i).setChecked(false);
                     }
 
@@ -488,4 +492,3 @@ public class ChooseDataSimPage extends SetupPage {
     }
 
 }
-

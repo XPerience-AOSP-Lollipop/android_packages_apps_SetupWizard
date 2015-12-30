@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The XPerience Project
+ * Copyright (C) 2013 The xperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,7 @@ import android.widget.NumberPicker;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.LocalePicker;
 import com.xperience.setupwizard.ui.SetupPageFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
@@ -91,6 +92,10 @@ public class WelcomePage extends SetupPage {
                 ActivityOptions.makeCustomAnimation(mContext,
                         android.R.anim.fade_in,
                         android.R.anim.fade_out);
+        SetupStats.addEvent(SetupStats.Categories.BUTTON_CLICK, SetupStats.Label.EMERGENCY_CALL);
+        SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                SetupStats.Action.EXTERNAL_PAGE_LAUNCH,
+                SetupStats.Label.PAGE,  SetupStats.Label.EMERGENCY_CALL);
         mContext.startActivity(intent, options.toBundle());
         return true;
     }
@@ -229,6 +234,9 @@ public class WelcomePage extends SetupPage {
             localResources.updateConfiguration(localConfiguration1, null);
             mHandler.removeCallbacks(mUpdateLocale);
             mCurrentLocale = paramLocale;
+            SetupStats.addEvent(SetupStats.Categories.SETTING_CHANGED,
+                    SetupStats.Action.CHANGE_LOCALE, SetupStats.Label.LOCALE,
+                    mCurrentLocale.getDisplayName());
             mHandler.postDelayed(mUpdateLocale, 1000);
         }
 

@@ -37,6 +37,7 @@ import android.widget.TextView;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.SetupPageFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 
@@ -123,6 +124,9 @@ public class MobileDataPage extends SetupPage {
                 boolean checked = !mEnableMobileData.isChecked();
                 SetupWizardUtils.setMobileDataEnabled(getActivity(), checked);
                 mEnableMobileData.setChecked(checked);
+                SetupStats.addEvent(SetupStats.Categories.SETTING_CHANGED,
+                        SetupStats.Action.ENABLE_MOBILE_DATA,
+                        SetupStats.Label.CHECKED, String.valueOf(checked));
             }
         };
 

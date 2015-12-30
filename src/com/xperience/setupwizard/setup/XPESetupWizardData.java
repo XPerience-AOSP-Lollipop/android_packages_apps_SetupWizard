@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The XPerience Project
+ * Copyright (C) 2013 The xperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,6 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import com.android.internal.telephony.TelephonyIntents;
 import com.xperience.setupwizard.R;
-import com.xperience.setupwizard.setup.XPerienceSettingsPage;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 
 import java.util.ArrayList;

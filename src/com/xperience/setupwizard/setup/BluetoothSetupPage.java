@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The XPerience Project
+ * Copyright (C) 2015 The xperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,7 @@ import android.util.Log;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.LoadingFragment;
 import com.xperience.setupwizard.ui.SetupPageFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
@@ -90,6 +91,9 @@ public class BluetoothSetupPage extends SetupPage {
     @Override
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SetupWizardApp.REQUEST_CODE_SETUP_BLUETOOTH) {
+            SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                    SetupStats.Action.EXTERNAL_PAGE_RESULT,
+                    SetupStats.Label.BLUETOOTH_SETUP, "success");
             getCallbacks().onNextPage();
         }  else {
             return false;
@@ -107,6 +111,9 @@ public class BluetoothSetupPage extends SetupPage {
                 ActivityOptions.makeCustomAnimation(mContext,
                         android.R.anim.fade_in,
                         android.R.anim.fade_out);
+        SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
+                SetupStats.Action.EXTERNAL_PAGE_LAUNCH,
+                SetupStats.Label.PAGE,  SetupStats.Label.BLUETOOTH_SETUP);
         mLoadingFragment.startActivityForResult(intent,
                 SetupWizardApp.REQUEST_CODE_SETUP_BLUETOOTH, options.toBundle());
     }
