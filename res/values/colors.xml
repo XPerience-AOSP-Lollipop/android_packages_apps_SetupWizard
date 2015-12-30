@@ -19,8 +19,8 @@
     <color name="white">#ffffff</color>
     <color name="page_background">#efefef</color>
 
-    <color name="primary">#00B1E5</color>
-    <color name="primary_dark">#00A2E5</color>
+    <color name="primary">#FF3D57</color><!--RED-->
+    <color name="primary_dark">#E41A35</color>
     <color name="accent">#009789</color>
     <color name="primary_text">#8a000000</color>
     <color name="secondary_text">#727272</color>

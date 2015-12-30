@@ -30,7 +30,7 @@
                  android:paddingRight="@dimen/content_margin_left"
                  style="@style/PageContent">
 
-        <com.cyanogenmod.setupwizard.ui.LocalePicker
+        <com.xperience.setupwizard.ui.LocalePicker
             android:id="@+id/locale_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
