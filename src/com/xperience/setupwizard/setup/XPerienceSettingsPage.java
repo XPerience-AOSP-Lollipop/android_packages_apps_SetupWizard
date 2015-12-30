@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.setupwizard.setup;
+package com.xperience.setupwizard.setup;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -46,12 +46,12 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cyanogenmod.setupwizard.R;
-import com.cyanogenmod.setupwizard.SetupWizardApp;
-import com.cyanogenmod.setupwizard.ui.SetupPageFragment;
-import com.cyanogenmod.setupwizard.ui.WebViewDialogFragment;
-import com.cyanogenmod.setupwizard.util.SetupWizardUtils;
-import com.cyanogenmod.setupwizard.util.WhisperPushUtils;
+import com.xperience.setupwizard.R;
+import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.ui.SetupPageFragment;
+import com.xperience.setupwizard.ui.WebViewDialogFragment;
+import com.xperience.setupwizard.util.SetupWizardUtils;
+import com.xperience.setupwizard.util.WhisperPushUtils;
 
 import cyanogenmod.providers.CMSettings;
 
@@ -60,9 +60,9 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import cyanogenmod.hardware.CMHardwareManager;
 
-public class CyanogenSettingsPage extends SetupPage {
+public class XPerienceSettingsPage extends SetupPage {
 
-    public static final String TAG = "CyanogenSettingsPage";
+    public static final String TAG = "XPerienceSettingsPage";
 
     public static final String KEY_SEND_METRICS = "send_metrics";
     public static final String KEY_REGISTER_WHISPERPUSH = "register";
@@ -74,7 +74,7 @@ public class CyanogenSettingsPage extends SetupPage {
 
     private static final String WHISPERPUSH_PACKAGE = "org.whispersystems.whisperpush";
 
-    public CyanogenSettingsPage(Context context, SetupDataCallbacks callbacks) {
+    public XPerienceSettingsPage(Context context, SetupDataCallbacks callbacks) {
         super(context, callbacks);
     }
 
@@ -85,7 +85,7 @@ public class CyanogenSettingsPage extends SetupPage {
             Bundle args = new Bundle();
             args.putString(Page.KEY_PAGE_ARGUMENT, getKey());
             args.putInt(Page.KEY_PAGE_ACTION, action);
-            fragment = new CyanogenSettingsFragment();
+            fragment = new XPerienceSettingsFragment();
             fragment.setArguments(args);
         }
         return fragment;
@@ -217,7 +217,7 @@ public class CyanogenSettingsPage extends SetupPage {
         return ThemeUtils.getDefaultThemePackageName(context).equals(ThemeConfig.SYSTEM_DEFAULT);
     }*/
 
-    public static class CyanogenSettingsFragment extends SetupPageFragment {
+    public static class XPerienceSettingsFragment extends SetupPageFragment {
 
         private View mKillSwitchView;
         private TextView mKillSwitchTitle;

@@ -34,7 +34,7 @@ public class SetupWizardApp extends Application {
 
     public static final String ACTION_FINISHED = "com.xperience.setupwizard.SETUP_FINISHED";
 
-    public static final String ACCOUNT_TYPE_CYANOGEN = "com.cyanogen";
+    public static final String ACCOUNT_TYPE_XPERIENCE = "com.cyanogen";
     public static final String ACCOUNT_TYPE_GMS = "com.google";
 
     public static final String ACTION_SETUP_WIFI = "com.android.net.wifi.SETUP_WIFI_NETWORK";
@@ -65,7 +65,7 @@ public class SetupWizardApp extends Application {
     public static final int REQUEST_CODE_SETUP_WIFI = 0;
     public static final int REQUEST_CODE_SETUP_GMS= 1;
     public static final int REQUEST_CODE_RESTORE_GMS= 2;
-    public static final int REQUEST_CODE_SETUP_CYANOGEN= 3;
+    public static final int REQUEST_CODE_SETUP_XPERIENCE= 3;
     public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL= 4;
     public static final int REQUEST_CODE_SETUP_BLUETOOTH= 5;
     public static final int REQUEST_CODE_UNLOCK = 6;
