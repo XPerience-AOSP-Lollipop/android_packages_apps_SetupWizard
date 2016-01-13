@@ -23,7 +23,6 @@ import android.content.Context;
 import android.content.pm.ComponentInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.hardware.fingerprint.FingerprintManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
@@ -285,12 +284,6 @@ public class SetupWizardUtils {
     public static boolean hasLeanback(Context context) {
         PackageManager packageManager = context.getPackageManager();
         return packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK);
-    }
-
-    public static boolean hasFingerprint(Context context) {
-        FingerprintManager fingerprintManager = (FingerprintManager)
-                context.getSystemService(Context.FINGERPRINT_SERVICE);
-        return fingerprintManager.isHardwareDetected();
     }
 
     public static final ComponentName mTvwifisettingsActivity =

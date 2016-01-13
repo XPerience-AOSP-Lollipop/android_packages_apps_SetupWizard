@@ -72,9 +72,6 @@ public class XPESetupWizardData extends AbstractSetupData {
                     mContext.getString(R.string.cm_account_package_name))) {
             pages.add(new XPerienceServicesPage(mContext, this).setHidden(true));
         }
-        if (SetupWizardUtils.hasFingerprint(mContext) && SetupWizardUtils.isOwner()) {
-            pages.add(new FingerprintSetupPage(mContext, this));
-        }
         pages.add(new XPerienceSettingsPage(mContext, this));
         pages.add(new OtherSettingsPage(mContext, this));
         pages.add(new DateTimePage(mContext, this));
