@@ -51,7 +51,6 @@ import com.xperience.setupwizard.cmstats.SetupStats;
 import com.xperience.setupwizard.ui.SetupPageFragment;
 import com.xperience.setupwizard.ui.WebViewDialogFragment;
 import com.xperience.setupwizard.util.SetupWizardUtils;
-import com.xperience.setupwizard.util.WhisperPushUtils;
 
 import cyanogenmod.providers.CMSettings;
 
