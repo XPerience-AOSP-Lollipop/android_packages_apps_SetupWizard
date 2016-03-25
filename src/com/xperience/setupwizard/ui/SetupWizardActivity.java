@@ -353,7 +353,7 @@ private static final String KEY_LAST_PAGE_TAG = "last_page_tag";
         mFinishingProgressBar.setVisibility(View.VISIBLE);
         mFinishingProgressBar.setIndeterminate(true);
         mFinishingProgressBar.startAnimation(fadeIn);
-        final ThemeManager tm = ThemeManager.getInstance();
+        final ThemeManager tm = ThemeManager.getInstance(this);
         tm.addClient(this);
         mSetupData.finishPages();
     }
@@ -469,7 +469,7 @@ private static final String KEY_LAST_PAGE_TAG = "last_page_tag";
                 if (mEnableAccessibilityController != null) {
                     mEnableAccessibilityController.onDestroy();
                 }
-                final ThemeManager tm = ThemeManager.getInstance();
+                final ThemeManager tm = ThemeManager.getInstance(SetupWizardActivity.this);
                 tm.removeClient(SetupWizardActivity.this);
                 SetupStats.sendEvents(SetupWizardActivity.this);
                 SetupWizardUtils.disableGMSSetupWizard(SetupWizardActivity.this);
