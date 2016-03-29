@@ -42,6 +42,7 @@ import android.util.Log;
 import android.view.IWindowManager;
 import android.view.View;
 import android.view.WindowManagerGlobal;
+import android.view.WindowManagerPolicyControl;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -189,6 +190,7 @@ public class XPerienceSettingsPage extends SetupPage {
                     Log.i(TAG, "Applying default lockscreen");
                     LockPatternUtils util = new LockPatternUtils(mContext);
                     util.setThirdPartyKeyguard(cn);
+                    disableImmersivePromptForLockscreen(cn);
                 } catch (PackageManager.NameNotFoundException | SecurityException e) {
                     Log.w(TAG, "Error setting default lockscreen: " + cn, e);
                 }
@@ -196,6 +198,14 @@ public class XPerienceSettingsPage extends SetupPage {
         }
     }
 
+    private void disableImmersivePromptForLockscreen(ComponentName cn) {
+        // prevents the immersive screen hint for the lockscreen
+        WindowManagerPolicyControl policy = new WindowManagerPolicyControl();
+        policy.reloadFromSetting(mContext);
+        policy.addToPreconfirmWhiteList(cn.getPackageName());
+        policy.saveToSettings(mContext);
+    }
+ 
     private static boolean hideKeyDisabler(Context ctx) {
         final CMHardwareManager hardware = CMHardwareManager.getInstance(ctx);
         return !hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE);
