@@ -35,6 +35,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
@@ -44,6 +45,8 @@ import android.view.WindowManagerGlobal;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.android.internal.widget.LockPatternUtils;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.SetupWizardApp;
@@ -145,6 +148,7 @@ public class XPerienceSettingsPage extends SetupPage {
         });
         handleEnableMetrics();
         handleDefaultThemeSetup();
+        handleDefaultLockscreenSetup();
     }
 
     private void handleEnableMetrics() {
@@ -172,6 +176,24 @@ public class XPerienceSettingsPage extends SetupPage {
         } else { */
             getCallbacks().finishSetup();
         //}
+    }
+
+    private void handleDefaultLockscreenSetup() {
+        String defaultLockscreenComponent = mContext.getResources().getString(
+                R.string.default_custom_lockscreen_component);
+        if (!TextUtils.isEmpty(defaultLockscreenComponent)) {
+            ComponentName cn =
+                    ComponentName.unflattenFromString(defaultLockscreenComponent);
+            if (cn != null) {
+                try {
+                    Log.i(TAG, "Applying default lockscreen");
+                    LockPatternUtils util = new LockPatternUtils(mContext);
+                    util.setThirdPartyKeyguard(cn);
+                } catch (PackageManager.NameNotFoundException | SecurityException e) {
+                    Log.w(TAG, "Error setting default lockscreen: " + cn, e);
+                }
+            }
+        }
     }
 
     private static boolean hideKeyDisabler(Context ctx) {
