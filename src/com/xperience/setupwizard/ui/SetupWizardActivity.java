@@ -51,6 +51,7 @@ import com.xperience.setupwizard.util.EnableAccessibilityController;
 import com.xperience.setupwizard.util.SetupWizardUtils;
 import com.xperience.setupwizard.setup.GmsAccountPage;
 
+import cyanogenmod.providers.CMSettings;
 import cyanogenmod.themes.ThemeManager;
 
 import java.util.ArrayList;
@@ -466,6 +467,8 @@ private static final String KEY_LAST_PAGE_TAG = "last_page_tag";
                 Settings.Global.putInt(getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 1);
                 Settings.Secure.putInt(getContentResolver(),
                         Settings.Secure.USER_SETUP_COMPLETE, 1);
+                CMSettings.Secure.putInt(getContentResolver(),
+                        CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, 1);
                 if (mEnableAccessibilityController != null) {
                     mEnableAccessibilityController.onDestroy();
                 }
