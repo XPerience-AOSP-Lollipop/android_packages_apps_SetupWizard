@@ -20,11 +20,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-import android.os.SystemProperties;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
-
 import android.util.Log;
+
 import com.android.internal.telephony.TelephonyIntents;
 import mx.xperience.setupwizard.R;
 import mx.xperience.setupwizard.util.SetupWizardUtils;
@@ -53,7 +52,6 @@ public class XPeSetupWizardData extends AbstractSetupData {
             pages.add(new BluetoothSetupPage(mContext, this));
         }
         pages.add(new WelcomePage(mContext, this));
-        pages.add(new LocalePage(mContext, this));
         pages.add(new DateTimePage(mContext, this));
         if (SetupWizardUtils.hasWifi(mContext)) {
             pages.add(new WifiSetupPage(mContext, this));
@@ -80,7 +78,6 @@ public class XPeSetupWizardData extends AbstractSetupData {
             pages.add(new FingerprintSetupPage(mContext, this));
         }
         pages.add(new ScreenLockSetupPage(mContext, this));
-        pages.add(new XPerienceSettingsPage(mContext, this));
         pages.add(new FinishPage(mContext, this));
         return new PageList(pages.toArray(new SetupPage[pages.size()]));
     }
@@ -92,7 +89,6 @@ public class XPeSetupWizardData extends AbstractSetupData {
             showHideDataSimPage();
             showHideSimMissingPage();
             showHideMobileDataPage();
-            updateLocalePage();
         } else if (intent.getAction()
                 .equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
             showHideMobileDataPage();
@@ -146,13 +142,6 @@ public class XPeSetupWizardData extends AbstractSetupData {
         DateTimePage dateTimePage = (DateTimePage) getPage(DateTimePage.TAG);
         if (dateTimePage != null) {
             dateTimePage.setHidden(mTimeZoneSet & mTimeSet);
-        }
-    }
-
-    private void updateLocalePage() {
-        LocalePage localePage = (LocalePage) getPage(LocalePage.TAG);
-        if (localePage != null) {
-            localePage.simChanged();
         }
     }
 
