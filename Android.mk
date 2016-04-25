@@ -8,6 +8,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_PACKAGE_NAME := XPerienceSetupWizard
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := Provision
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
