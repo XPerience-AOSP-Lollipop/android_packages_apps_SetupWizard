@@ -113,8 +113,13 @@ public class XPESetupWizardData extends AbstractSetupData {
         boolean isConnected = SetupWizardUtils.isNetworkConnected(mContext);
         GmsAccountPage gmsAccountPage =
                 (GmsAccountPage) getPage(GmsAccountPage.TAG);
+        OtherSettingsPage otherSettingsPage = (OtherSettingsPage) getPage(OtherSettingsPage.TAG);
         if (gmsAccountPage != null) {
-            gmsAccountPage.setHidden(!isConnected && gmsAccountPage.canSkip());
+            boolean hidden = !isConnected && gmsAccountPage.canSkip();
+            gmsAccountPage.setHidden(hidden);
+            if (otherSettingsPage != null) {
+                otherSettingsPage.setHidden(!hidden);
+            }
         }
         XPerienceServicesPage xperienceServicesPage =
                 (XPerienceServicesPage) getPage(XPerienceServicesPage.TAG);
