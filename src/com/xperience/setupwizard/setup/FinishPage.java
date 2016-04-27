@@ -16,13 +16,17 @@
 
 package com.xperience.setupwizard.setup;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.xperience.setupwizard.R;
 import com.xperience.setupwizard.ui.SetupPageFragment;
+import com.xperience.setupwizard.util.SetupWizardUtils;
 
 public class FinishPage extends SetupPage {
 
@@ -71,7 +75,15 @@ public class FinishPage extends SetupPage {
     public static class FinishFragment extends SetupPageFragment {
 
         @Override
-        protected void initializePage() {}
+        protected void initializePage() {
+            final Activity activity = getActivity();
+            if (activity != null && SetupWizardUtils.canHasModMOD(activity)) {
+                ImageView imageView = (ImageView) mRootView.findViewById(R.id.brand_logo);
+                imageView.setImageResource(R.drawable.mod_ready);
+                mRootView.findViewById(R.id.mod_welcome).setVisibility(View.VISIBLE);
+                mRootView.findViewById(R.id.mod_desc).setVisibility(View.VISIBLE);
+            }
+        }
 
         @Override
         protected int getLayoutResource() {
