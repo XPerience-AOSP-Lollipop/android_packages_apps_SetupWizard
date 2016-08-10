@@ -75,6 +75,8 @@ public class XPESetupWizardData extends AbstractSetupData {
         }
         if (SetupWizardUtils.hasFingerprint(mContext) && SetupWizardUtils.isOwner()) {
             pages.add(new FingerprintSetupPage(mContext, this));
+        } else if (SetupWizardUtils.frpEnabled(mContext)) {
+            pages.add(new ScreenLockSetupPage(mContext, this));
         }
         pages.add(new XPerienceSettingsPage(mContext, this));
         pages.add(new OtherSettingsPage(mContext, this).setHidden(!hasGMS));

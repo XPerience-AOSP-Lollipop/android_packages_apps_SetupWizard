@@ -74,6 +74,13 @@
   <string name="fingerprint_setup_title">Настройка отпечатков пальцев</string>
   <string name="fingerprint_setup_summary">Чтобы использовать сканер отпечатков пальцев для разблокировки экрана, необходимо:</string>
   <string name="fingerprint_setup_backup_lock_method">Настроить дополнительный способ разблокировки</string>
-  <string name="fingerprint_setup_add_fingerprint">Добавить отпечаток пальца</string>
-  <string name="fingerprint_setup_screen_lock_setup">Настроить блокировку экрана</string>
+  <string name="fingerprint_setup_add_fingerprint">Добавить ваши отпечатки</string>
+  <string name="fingerprint_setup_screen_lock_setup">Настроить экран блокировки</string>
+  <string name="sim_locale_changed">Обнаружена %1$s SIM-карта</string>
+
+  <!-- secure lock screen -->
+  <string name="lockscreen_setup_title">Защитите телефон</string>
+  <string name="lockscreen_setup_summary"><b>Защитить устройство</b> и запрашивать PIN-код, графический ключ или пароль</string>
+  <string name="lockscreen_setup_screen_lock_setup">Добавить PIN-код, графический ключ или пароль</string>
+  <!-- MOD stuff -->
 </resources>
