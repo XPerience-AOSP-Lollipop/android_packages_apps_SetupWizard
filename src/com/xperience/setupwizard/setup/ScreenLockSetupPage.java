@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.setupwizard.setup;
+package com.xperience.setupwizard.setup;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
@@ -25,10 +25,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import com.cyanogenmod.setupwizard.R;
-import com.cyanogenmod.setupwizard.SetupWizardApp;
-import com.cyanogenmod.setupwizard.cmstats.SetupStats;
-import com.cyanogenmod.setupwizard.ui.SetupPageFragment;
+import com.xperience.setupwizard.R;
+import com.xperience.setupwizard.SetupWizardApp;
+import com.xperience.setupwizard.cmstats.SetupStats;
+import com.xperience.setupwizard.ui.SetupPageFragment;
 
 public class ScreenLockSetupPage extends SetupPage {
 
