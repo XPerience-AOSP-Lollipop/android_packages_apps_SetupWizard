@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2013-2015 The XPerience Project
+     Copyright (C) 2017 The XPerience Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -20,9 +21,6 @@
     <string name="os_name" translatable="false">XPerience</string>
     <string name="default_theme_name" translatable="false">Material</string>
 
-    <string name="cm_account_type" translatable="false">com.cyanogenmod.account</string>
-    <string name="cm_account_package_name" translatable="false">com.cyanogenmod.account</string>
-
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="start">Start</string>
@@ -32,6 +30,7 @@
 
     <string name="setup_complete">Setup is complete</string>
     <string name="setup_welcome">Welcome</string>
+    <string name="setup_locale">Language</string>
     <string name="setup_wifi">Select Wi-Fi</string>
     <string name="setup_sim_missing">SIM card missing</string>
     <string name="setup_choose_data_sim">Choose a SIM for data</string>
@@ -55,13 +54,13 @@
     <string name="location_access_summary"><b>Allow apps that have asked your permission</b> to use your location information. This may include your current location and past locations.</string>
     <string name="location_battery_saving"><b>Reduce battery consumption</b> by restricting the number of GPS updates per hour.</string>
     <string name="location_network"><b>Use Wi-Fi</b> to help apps determine your location.</string>
-    <string name="location_network_telephony"><b>Use Wi-Fi and mobile networks</b> to help apps determine your location.</string>
+    <string name="location_network_telephony"><b>Use Wi-Fi and cellular networks</b> to help apps determine your location.</string>
     <string name="location_network_gms"><b>Use Google\'s location service</b> to help apps determine your location. This means sending anonymous location data to Google, even when no apps are running.</string>
 
-    <string name="setup_mobile_data">Turn on mobile data</string>
+    <string name="setup_mobile_data">Turn on cellular data</string>
     <string name="setup_mobile_data_no_service">No service</string>
     <string name="setup_mobile_data_emergency_only">Emergency calls only</string>
-    <string name="enable_mobile_data_summary">Do you want to use mobile data during setup? Turning on mobile data may be subject to data charges.</string>
+    <string name="enable_mobile_data_summary">Do you want to use cellular data during setup? Turning on cellular data may be subject to data charges.</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
 
@@ -78,14 +77,12 @@
     <string name="services_apply_theme">Apply the <xliff:g id="name" example="Material">%s</xliff:g> theme</string>
     <string name="services_apply_theme_label"><xliff:g id="name" example="Apply the Material theme">%s</xliff:g> enabling a unique visual style for your icons, wallpaper and more.</string>
     <string name="services_os_nav_keys_label"><b>Use on screen navigation keys</b> instead of hardware keys.</string>
-    <string name="services_use_secure_sms">Use secure SMS</string>
-    <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%1$s</xliff:g> to encrypt SMS conversations with other users using secure SMS on a <xliff:g id="name" example="XPerience">%2$s</xliff:g> device.</string>
+    <string name="services_os_privacy_guard"><b>Enable Privacy guard</b> to make your personal data such as contacts, messages or call logs not available for newly installed apps</string>
 
     <string name="setup_unlock">Unlock</string>
     <string name="setup_device_locked">This device has been locked by the user.</string>
-    <string name="setup_require_cyanogen_label"><b>Require your XPerience OS account password</b> in order to use your device even after a factory reset.</string>
+    <string name="setup_require_cyanogen_label"><b>Require your account password</b> in order to use your device even after a factory reset.</string>
     <string name="setup_device_locked_instructions"><i>To turn this feature off/on, please go to Settings > Security</i></string>
-    <string name="setup_warning_skip_anyway">Without a XPerience OS Account, you won\'t be able to:\n\nCustomize your phone with new icons, wallpapers and more in the Themes app\n\nLocate or remotely erase your phone if it\'s lost</string>
 
     <!-- Fingerprint setup -->
     <string name="settings_fingerprint_setup_title">Select backup screen lock type</string>
@@ -102,11 +99,6 @@
     <string name="settings_lockscreen_setup_details">How would you like to lock your screen?</string>
     <string name="lockscreen_setup_title">Protect your phone</string>
     <string name="lockscreen_setup_summary"><b>Protect this device</b> and require a PIN, pattern, or password to unlock the screen</string>
-    <string name="lockscreen_setup_screen_lock_setup">Set up PIN, pattern or password</string>
-
-    <!-- MOD stuff -->
-    <string name="mod_welcome">Your device is MOD Ready</string>
-    <string name="mod_description">Mods make your phone faster, smarter, and easier to use. In this guide, you can discover new mods, learn what they do, and enable or disable them.</string>
-    <string name="mod_explore">Explore MOD Guide</string>
+    <string name="lockscreen_setup_screen_lock_setup">Set up</string>
 
 </resources>
