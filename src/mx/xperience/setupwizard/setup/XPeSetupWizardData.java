@@ -29,6 +29,8 @@ import com.android.internal.telephony.TelephonyIntents;
 import mx.xperience.setupwizard.R;
 import mx.xperience.setupwizard.util.SetupWizardUtils;
 
+import org.cyanogenmod.internal.util.PackageManagerUtils;
+
 import java.util.ArrayList;
 
 public class XPeSetupWizardData extends AbstractSetupData {
@@ -68,7 +70,8 @@ public class XPeSetupWizardData extends AbstractSetupData {
             pages.add(new MobileDataPage(mContext, this)
                     .setHidden(!isSimInserted() || mMobileDataEnabled));
         }
-        final boolean hasGMS = SetupWizardUtils.hasGMS(mContext);
+        final boolean hasGMS = PackageManagerUtils
+                .isAppInstalled(mContext, "com.google.android.gms");
         if (hasGMS) {
             pages.add(new GmsAccountPage(mContext, this));
         }
