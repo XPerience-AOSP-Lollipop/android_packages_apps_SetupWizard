@@ -60,7 +60,7 @@
   <string name="services_explanation" product="default">Estos servicios sirven para extender las capacidades del teléfono. Se utilizarán datos de acuerdo con las <xliff:g id="name" example="Privacy Policy">%s</xliff:g> de XPerience.</string>
   <string name="services_privacy_policy">Política de privacidad</string>
   <string name="services_help_improve_cm">Ayuda a mejorar <xliff:g id="name" example="XPerience">%s</xliff:g></string>
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve XPerience">%1$s</xliff:g> enviando automáticamente diagnósticos de depuración y uso de datos a XPerience. Esta información no se utilizará para identificarte y sirve para mejorar la vida útil de la batería, el rendimiento de la aplicación y el desarrollo de nuevas características desarrolladas por <xliff:g id="name" example="CyanogenMod">%2$s</xliff:g>.</string>
+  <string name="services_metrics_label"><xliff:g id="name" example="Help improve XPerience">%1$s</xliff:g> enviando automáticamente diagnósticos de depuración y uso de datos a XPerience. Esta información no se utilizará para identificarte y sirve para mejorar la vida útil de la batería, el rendimiento de la aplicación y el desarrollo de nuevas características desarrolladas por <xliff:g id="name" example="XPerience">%2$s</xliff:g>.</string>
   <string name="services_apply_theme">Aplicar el tema <xliff:g id="name" example="Material">%s</xliff:g></string>
   <string name="services_apply_theme_label"><xliff:g id="name" example="Apply the Material theme">%s</xliff:g> permite un estilo visual único para sus iconos, fondo de pantalla y más.</string>
   <string name="services_os_nav_keys_label"><b>Usar las teclas de navegación en pantalla</b> en vez de las teclas físicas.</string>

@@ -25,6 +25,7 @@
   <string name="loading">Lige et øjeblik\u2026</string>
   <string name="setup_complete">Installationen er fuldført</string>
   <string name="setup_welcome">Velkommen</string>
+  <string name="setup_locale">Sprog</string>
   <string name="setup_wifi">Vælg Wi-Fi</string>
   <string name="setup_sim_missing">SIM-kort mangler</string>
   <string name="setup_choose_data_sim">Vælg et SIM-kort til data</string>
@@ -55,16 +56,15 @@
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Nødopkald</string>
   <string name="setup_services">XPerience-funktioner</string>
-  <string name="services_explanation" product="tablet">Disse tjenester giver dig flere muligheder med din tablet. Data bliver anvendt i overensstemmelse med XPerience <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="services_explanation" product="default">Disse tjenester giver dig flere muligheder med din telefon. Data bliver anvendt i overensstemmelse med XPerience <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
+  <string name="services_explanation" product="tablet">Disse tjenester giver dig flere muligheder med din tablet. Data bliver anvendt i overensstemmelse med XPerience\' <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
+  <string name="services_explanation" product="default">Disse tjenester giver dig flere muligheder med din telefon. Data bliver anvendt i overensstemmelse med XPerience\' <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
   <string name="services_privacy_policy">Privatlivspolitik</string>
   <string name="services_help_improve_cm">Hjælpe med at forbedre <xliff:g id="name" example="XPerience">%s</xliff:g></string>
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve XPerience">%1$s</xliff:g> ved automatisk at sende diagnosticerings- og brugsoplysninger til XPerience. Denne information kan ikke bruges til at identificere dig, men hjælper udviklerne i arbejdet med eksempelvis batterilevetid, ydeevne og nye <xliff:g id="name" example="XPerience">%2$s</xliff:g> funktioner.</string>
+  <string name="services_metrics_label"><xliff:g id="name" example="Help improve XPerience">%1$s</xliff:g> ved automatisk at sende diagnosticerings- og brugsoplysninger til XPerience. Denne information kan ikke bruges til at identificere dig, men hjælper udviklerne i arbejdet med eksempelvis batterilevetid, ydeevne og nye <xliff:g id="name" example="XPerience">%2$s</xliff:g>-funktioner.</string>
   <string name="services_apply_theme">Anvend temaet <xliff:g id="name" example="Material">%s</xliff:g></string>
   <string name="services_apply_theme_label"><xliff:g id="name" example="Apply the Material theme">%s</xliff:g> muliggør et unikt udseende til dine ikoner, baggrunde og meget mere.</string>
   <string name="services_os_nav_keys_label"><b>Brug navigationstaster på skærmen</b> i stedet for fysiske knapper.</string>
-  <string name="services_use_secure_sms">Brug sikker SMS</string>
-  <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%1$s</xliff:g> til at kryptere SMS-samtaler med andre brugere ved hjælp af sikker SMS på en <xliff:g id="name" example="XPerience">%2$s</xliff:g> enhed.</string>
+  <string name="services_os_privacy_guard"><b>Aktivér Privatlivsvagt</b> for at gøre dine personlige data såsom kontaktet, beskeder og opkaldsliste utilgængelige for apps installeret for nylig</string>
   <string name="setup_unlock">Lås op</string>
   <string name="setup_device_locked">Denne enhed er blevet låst af brugeren.</string>
   <string name="setup_require_cyanogen_label"><b>Kræver adgangskoden til din konto</b> for at bruge enheden, selv efter en nulstilling til fabriksindstillinger.</string>
@@ -84,9 +84,5 @@
   <string name="settings_lockscreen_setup_details">Hvordan vil du gerne låse din skærm?</string>
   <string name="lockscreen_setup_title">Beskyt din telefon</string>
   <string name="lockscreen_setup_summary"><b>Beskyt denne enhed</b>, og kræv pinkode, mønster eller adgangskode for at låse skærmen op</string>
-  <string name="lockscreen_setup_screen_lock_setup">Konfigurer pinkode, mønster eller adgangskode</string>
-  <!-- MOD stuff -->
-  <string name="mod_welcome">Din enhed er MOD Klar</string>
-  <string name="mod_description">Mods gør din telefon hurtigere, smartere og nemmere at bruge. I denne guide kan du udforske nye mods, lære hvad de gør, og aktivere eller deaktivere dem.</string>
-  <string name="mod_explore">Udforsk MOD Guide</string>
+  <string name="lockscreen_setup_screen_lock_setup">Konfigurering</string>
 </resources>
