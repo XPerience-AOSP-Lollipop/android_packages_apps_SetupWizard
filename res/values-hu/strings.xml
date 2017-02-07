@@ -25,6 +25,7 @@
   <string name="loading">Csak egy pillanat\u2026</string>
   <string name="setup_complete">Beállítás kész</string>
   <string name="setup_welcome">Üdvözöljük</string>
+  <string name="setup_locale">Nyelv</string>
   <string name="setup_wifi">Wi-Fi kiválasztása</string>
   <string name="setup_sim_missing">Hiányzik a SIM-kártya</string>
   <string name="setup_choose_data_sim">Válasszon SIM-kártyát az adatforgalomhoz</string>
@@ -54,7 +55,7 @@
   <string name="yes">Igen</string>
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Segélyhívás</string>
-  <string name="setup_services">XPerience funkciók</string>
+  <string name="setup_services">XPerience újítások</string>
   <string name="services_explanation" product="tablet">Ezek a szolgáltatások azon dolgoznak, hogy kibővítsék az Ön táblagépe képességeit. Az adatok felhasználása a XPerience <xliff:g id="name" example="Privacy Policy">%s</xliff:g> alapján történik.</string>
   <string name="services_explanation" product="default">Ezek a szolgáltatások azon dolgoznak, hogy kibővítsék az Ön telefonja képességeit. Az adatok felhasználása a XPerience <xliff:g id="name" example="Privacy Policy">%s</xliff:g> alapján történik.</string>
   <string name="services_privacy_policy">Adatvédelmi nyilatkozat</string>
@@ -67,7 +68,7 @@
   <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%1$s</xliff:g> az SMS beszélgetések titkosításához más olyan felhasználókkal, akik szintén biztonságos SMS-t használnak <xliff:g id="name" example="XPerience">%2$s</xliff:g> eszközön.</string>
   <string name="setup_unlock">Feloldás</string>
   <string name="setup_device_locked">Ezt az eszközt a felhasználó zárolta.</string>
-  <string name="setup_require_cyanogen_label"><b>fiókjának jelszava szükséges</b> a készülék használatához, még a gyári beállítások visszaállítása után is.</string>
+  <string name="setup_require_cyanogen_label"><b>Fiókjának jelszava szükséges</b> a készülék használatához, még a gyári beállítások visszaállítása után is.</string>
   <string name="setup_device_locked_instructions"><i>A szolgáltatás ki/be kapcsolásához, kérjük menjen ide: Beállítások &gt; Biztonság</i></string>
   <string name="setup_warning_skip_anyway">XPerience OS fiók nélkül nem fog hozzáférni a következőkhöz:\n\nTelefon testreszabása új ikonokkal, háttérképekkel és egyebekkel a Téma kezelő alkalmazáson keresztül\n\nTelefon helyének maghatározása, vagy távolról való törlése, ha elveszett</string>
   <!-- Fingerprint setup -->
@@ -84,9 +85,5 @@
   <string name="settings_lockscreen_setup_details">Hogyan szeretné zárolni a képernyőt?</string>
   <string name="lockscreen_setup_title">Óvja meg telefonját</string>
   <string name="lockscreen_setup_summary"><b>Óvja meg eszközét</b>, és a képernyőzár feloldásához állítson be PIN kódot, mintát vagy jelszót.</string>
-  <string name="lockscreen_setup_screen_lock_setup">PIN kód, minta vagy jelszó beállítása</string>
-  <!-- MOD stuff -->
-  <string name="mod_welcome">Készüléke MOD képes</string>
-  <string name="mod_description">A Mod-ok gyorsabbá, okosabbá és könnyen kezelhetőbbé teszik a készülékét. Ebben az útmutatóban új Mod-okat fedezhet fel, megtudhatja hogyan működnek, engedélyezheti vagy kikapcsolhatja őket.</string>
-  <string name="mod_explore">Mod útmutató</string>
+  <string name="lockscreen_setup_screen_lock_setup">Beállítás</string>
 </resources>

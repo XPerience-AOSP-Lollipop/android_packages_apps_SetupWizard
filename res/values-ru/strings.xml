@@ -84,9 +84,5 @@
   <string name="settings_lockscreen_setup_details">Как вы хотите заблокировать ваш экран?</string>
   <string name="lockscreen_setup_title">Защитите телефон</string>
   <string name="lockscreen_setup_summary"><b>Защитить устройство</b> и запрашивать PIN-код, графический ключ или пароль</string>
-  <string name="lockscreen_setup_screen_lock_setup">Добавить PIN-код, графический ключ или пароль</string>
-  <!-- MOD stuff -->
-  <string name="mod_welcome">Ваше устройство поддерживает моды</string>
-  <string name="mod_description">Моды делают ваш телефон быстрее, умнее и проще в использовании. В этом руководстве вы можете открыть для себя новые моды, узнать, что они делают, и включить или отключить их.</string>
-  <string name="mod_explore">Изучите руководство по модам</string>
+  <string name="lockscreen_setup_screen_lock_setup">Настройка</string>
 </resources>
