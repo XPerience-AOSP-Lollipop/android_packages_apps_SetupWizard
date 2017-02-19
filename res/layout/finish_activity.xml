@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.cyanogenmod.setupwizard.widget.ScrimInsetsFrameLayout
+<mx.xperience.setupwizard.widget.ScrimInsetsFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
@@ -70,4 +70,4 @@
         android:layout_gravity="bottom"
         android:visibility="gone"/>
 
-</com.cyanogenmod.setupwizard.widget.ScrimInsetsFrameLayout>
+</mx.xperience.setupwizard.widget.ScrimInsetsFrameLayout>
