@@ -40,7 +40,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.cyanogenmod.setupwizard.util.SetupWizardUtils;
+import mx.xperience.setupwizard.util.SetupWizardUtils;
 
 import org.xmlpull.v1.XmlPullParserException;
 
