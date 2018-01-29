@@ -63,12 +63,12 @@ import mx.xperience.setupwizard.SimMissingActivity;
 import mx.xperience.setupwizard.WifiSetupActivity;
 import mx.xperience.setupwizard.wizardmanager.WizardManager;
 
-import org.cyanogenmod.internal.util.PackageManagerUtils;
+import org.lineageos.internal.util.PackageManagerUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
 public class SetupWizardUtils {
 

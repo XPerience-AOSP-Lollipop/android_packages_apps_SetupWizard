@@ -36,16 +36,19 @@
     <uses-permission android:name="android.permission.MANAGE_USERS" />
     <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-    <uses-permission android:name="cyanogenmod.permission.HARDWARE_ABSTRACTION_ACCESS" />
+    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
     <uses-permission android:name="android.permission.BACKUP" />
     <uses-permission android:name="cyanogenmod.permission.FINISH_SETUP" />
     <uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
     <uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS" />
 
     <permission
+        android:name="cyanogenmod.permission.PROTECTED_APP"
+        android:protectionLevel="signatureOrSystem" />
+
+    <permission
         android:name="cyanogenmod.permission.FINISH_SETUP"
-        android:protectionLevel="signatureOrSystem"
-        androidprv:allowViaWhitelist="true" />
+        android:protectionLevel="signatureOrSystem" />
 
     <protected-broadcast android:name="mx.xperience.setupwizard.SETUP_FINISHED"
                          android:permission="cyanogenmod.permission.FINISH_SETUP"/>
