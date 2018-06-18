@@ -31,6 +31,8 @@ import android.util.Log;
 import mx.xperience.setupwizard.util.SetupWizardUtils;
 import mx.xperience.setupwizard.wizardmanager.WizardManager;
 
+import com.android.setupwizardlib.util.WizardManagerHelper;
+
 public class SetupWizardActivity extends BaseSetupWizardActivity {
     private static final String TAG = SetupWizardActivity.class.getSimpleName();
 
@@ -45,6 +47,9 @@ public class SetupWizardActivity extends BaseSetupWizardActivity {
                 Log.v(TAG, "Has GMS disabling local wizard manager");
             }
             SetupWizardUtils.disableComponentsForGMS(this);
+            finish();
+        } else if (WizardManagerHelper.isUserSetupComplete(this)) {
+            SetupWizardUtils.finishSetupWizard(this);
             finish();
         } else {
             onSetupStart();
