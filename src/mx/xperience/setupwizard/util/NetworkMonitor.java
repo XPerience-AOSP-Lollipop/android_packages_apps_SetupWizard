@@ -27,8 +27,11 @@ import android.net.NetworkInfo;
 import android.os.Handler;
 import android.util.Log;
 
+<<<<<<< HEAD:src/mx/xperience/setupwizard/util/NetworkMonitor.java
 import mx.xperience.setupwizard.SetupWizardApp;
 
+=======
+>>>>>>> 2236d29... SUW: (Not-really-)Spring Cleanup:src/org/lineageos/setupwizard/util/NetworkMonitor.java
 public class NetworkMonitor {
 
     public static final String TAG = NetworkMonitor.class.getSimpleName();
@@ -80,18 +83,12 @@ public class NetworkMonitor {
     }
 
     public boolean isWifiConnected() {
-        boolean wifiConnected = (!mNetworkConnected || mNetworkInfo == null) ?
-                false :
-                mNetworkInfo.getType() == 1;
+        boolean wifiConnected = (mNetworkConnected && mNetworkInfo != null &&
+                mNetworkInfo.getType() == 1);
         if (LOGV) {
             Log.v(TAG, "isWifiConnected() returns " + wifiConnected);
         }
         return wifiConnected;
-    }
-
-    public boolean checkIsNetworkConnected() {
-        updateNetworkStatus(mContext);
-        return isNetworkConnected();
     }
 
     private void onNetworkConnected(NetworkInfo ni) {

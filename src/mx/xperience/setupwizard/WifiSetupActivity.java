@@ -18,7 +18,6 @@
 package mx.xperience.setupwizard;
 
 import static mx.xperience.setupwizard.SetupWizardApp.ACTION_SETUP_WIFI;
-import static mx.xperience.setupwizard.SetupWizardApp.EXTRA_MATERIAL_LIGHT;
 import static mx.xperience.setupwizard.SetupWizardApp.REQUEST_CODE_SETUP_WIFI;
 
 import android.content.Intent;

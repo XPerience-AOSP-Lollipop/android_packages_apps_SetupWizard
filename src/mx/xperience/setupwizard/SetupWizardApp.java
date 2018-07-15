@@ -26,7 +26,6 @@ import android.util.Log;
 import mx.xperience.setupwizard.util.NetworkMonitor;
 import mx.xperience.setupwizard.util.PhoneMonitor;
 import mx.xperience.setupwizard.util.SetupWizardUtils;
-import mx.xperience.setupwizard.wizardmanager.WizardManager;
 
 public class SetupWizardApp extends Application {
 
@@ -88,12 +87,7 @@ public class SetupWizardApp extends Application {
     private final Bundle mSettingsBundle = new Bundle();
     private final Handler mHandler = new Handler();
 
-    private final Runnable mRadioTimeoutRunnable = new Runnable() {
-        @Override
-        public void run() {
-            mIsRadioReady = true;
-        }
-    };
+    private final Runnable mRadioTimeoutRunnable = () ->  mIsRadioReady = true;
 
     @Override
     public void onCreate() {
